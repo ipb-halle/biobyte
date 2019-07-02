@@ -13,8 +13,8 @@ Below is a screenshot of the full Galaxy workflow which includes data import, lo
 ## Processing of the workflow
 Processing the feature list (in tabular format) in the Galaxy workflow management system results in the following plots.
 
-![Dendrogram plot with expected results](results_dendrogram.pdf)
-![Heatmap plot with expected results](results_heatmap.pdf)
+![Dendrogram plot with expected results](results_dendrogram.png)
+![Heatmap plot with expected results](results_heatmap.png)
 
 ## Acknowlegements
 - Kristian Peters
