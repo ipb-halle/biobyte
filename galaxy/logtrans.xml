@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<tool id="logtrans" name="logtrans" version="1.0">
+  <requirements>
+    <container type="docker">korseby/ketchup</container>
+  </requirements>
+  <description>Log transformation of ketchup data</description>
+  <stdio>
+    <regex match="" source="stderr" level="warning" description="R messages" />
+    <exit_code range="1:" level="fatal" description="Tool error" />
+  </stdio>
+  <command><![CDATA[
+logtrans.r $infile1 $outfile1;
+  ]]>
+  </command>
+  <inputs>
+    <param name="infile1" type="data" format="tabular" optional="False" label="Input Feature list" />
+  </inputs>
+  <outputs>
+    <data name="outfile1" type="data" format="tabular" label="Log-transformed Feature List" />
+  </outputs>
+  <help>
+================
+Ketchup workflow
+================
+
+This is the ketchup workflow.
+
+Module
+	| Log-Transformation
+	|
+
+Description
+	| Log transformation of ketchup data
+	|
+
+-----
+Input
+-----
+
+Input Feature list
+	| Feature list file in TSV format
+	|
+
+------
+Output
+------
+
+Output Feature list
+	| Feature list file in TSV format
+	|
+
+
+---------------------------------------------------
+
+.. class:: infomark
+
+**Authors**
+
+**Kristian Peters (kpeters@ipb-halle.de)**
+
+  </help>
+</tool>
+

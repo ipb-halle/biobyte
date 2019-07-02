@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<tool id="dendrogram" name="dendrogram" version="1.0">
+  <requirements>
+    <container type="docker">korseby/ketchup</container>
+  </requirements>
+  <description>Show dendrogramm of ketchup data</description>
+  <stdio>
+    <regex match="" source="stderr" level="warning" description="R messages" />
+    <exit_code range="1:" level="fatal" description="Tool error" />
+  </stdio>
+  <command><![CDATA[
+dendrogram.r $infile1 $outfile1;
+  ]]>
+  </command>
+  <inputs>
+    <param name="infile1" type="data" format="tabular" optional="False" label="Input Feature list" />
+  </inputs>
+  <outputs>
+    <data name="outfile1" type="data" format="pdf" label="Dendrogram" />
+  </outputs>
+  <help>
+================
+Ketchup workflow
+================
+
+This is the ketchup workflow.
+
+Module
+	| Dendrogram
+	|
+
+Description
+	| Show dendrogram of ketchup data
+	|
+
+-----
+Input
+-----
+
+Input Feature list
+	| Feature list file in TSV format
+	|
+
+------
+Output
+------
+
+Dendrogramm
+	| plot in PDF format
+	|
+
+
+---------------------------------------------------
+
+.. class:: infomark
+
+**Authors**
+
+**Kristian Peters (kpeters@ipb-halle.de)**
+
+  </help>
+</tool>
+
