@@ -2,7 +2,7 @@
 Training example for Biobyte training event.
 
 ## Example data
-Example data is available as MTBLS00.
+Example data is available as MTBLS655 (Metabolite Profiling: Blood or Ketchup).
 From the example data, peak picking was performed with XCMS and standard settings to give the feature list.
 
 The example feature list can be imported from this url: `https://ogy.de/lsep`
@@ -25,4 +25,5 @@ Processing the feature list (in tabular format) in the Galaxy workflow managemen
 - Hendrik Treutler
 - Rene Meier
 - Steffen Neumann
+- Edda Roepenack (for the dataset on MetaboLights)
 

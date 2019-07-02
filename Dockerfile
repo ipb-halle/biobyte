@@ -4,8 +4,8 @@ MAINTAINER Kristian Peters ( kpeters@ipb-halle.de )
 
 ENV R_VERSION="3.5.3-1xenial"
 
-# docker build -t korseby/ketchup .
-# docker push korseby/ketchup
+# docker build -t ipb-halle/biobyte .
+# docker push ipb-halle/biobyte
 
 # Add cran R backport
 RUN echo "deb http://cloud.r-project.org/bin/linux/ubuntu xenial-cran35/" >> /etc/apt/sources.list && \
