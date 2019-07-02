@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <tool id="heatmap" name="heatmap" version="1.0">
   <requirements>
-    <container type="docker">korseby/ketchup</container>
+    <container type="docker">ipb-halle/biobyte</container>
   </requirements>
   <description>Show heatmap of ketchup data</description>
   <stdio>
