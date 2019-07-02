@@ -1,6 +1,8 @@
 # Biobyte
 Training example for Biobyte training event.
 
+Metabolite profiling was performed on different samples of red stuff: Blood and Ketchup from 10 different commercial manufacturers. Mass Spectrometry is not always as simple as it looks on TV. This data was acquired for the science night at the IPB Halle.
+
 ## Example data
 Example data is available as MTBLS655 (Metabolite Profiling: Blood or Ketchup).
 From the example data, peak picking was performed with XCMS and standard settings to give the feature list.
