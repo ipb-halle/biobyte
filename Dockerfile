@@ -20,4 +20,4 @@ RUN apt-get -y clean && apt-get -y autoremove && rm -rf /var/lib/{cache,log}/ /t
 
 # Add scripts to container
 ADD scripts/* /usr/local/bin/
-RUN chmod +x /usr/local/bin/*
+RUN chmod +rx /usr/local/bin/*
