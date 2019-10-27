@@ -35,7 +35,7 @@ library(phangorn)
 feat_list <- read.table(file=args[1], header=TRUE, quote="\"", sep="\t")
 
 # Sample names
-ketchup_samples <- c("Aldi.1apos_1.C.7_01_3592", "Aldi.1bpos_1.C.7_01_3607", "Blut.1apos_1.C.8_01_3593", "Blut.1bpos_1.C.8_01_3608", "Heinz.1apos_1.C.1_01_3586", "Heinz.1bpos_1.C.1_01_3601", "Knorr.1apos_1.C.2_01_3587", "Knorr.1bpos_1.C.2_01_3602", "Kraft.1apos_1.C.5_01_3590", "Kraft.1bpos_1.C.5_01_3605", "Penny.1apos_1.C.4_01_3589", "Penny.1bpos_1.C.4_01_3604", "Purree.1apos_1.C.3_01_3588", "Purree.1bpos_1.C.3_01_3603", "Werder.1apos_1.C.6_01_3591", "Werder.1bpos_1.C.6_01_3606")
+ketchup_samples <- colnames(feat_list)
 
 # Sample classes: ketchup
 ketchup <- as.factor(sapply(strsplit(as.character(ketchup_samples), "\\."), function(x) {
@@ -51,8 +51,8 @@ ketchup_colors <- c("darkorange1","blue3","darkorange3","darkorange4","coral2","
 ketchup_symbols <- c(0,16,1,2,5,6,7,10)
 
 # Define samples colors
-ketchup_samples_colors <- sapply(ketchup, function(x) { x <- ketchup_colors[which(x==ketchup_names)] } )
-ketchup_samples_symbols <- sapply(ketchup, function(x) { x <- ketchup_symbols[which(x==ketchup_names)] } )
+ketchup_colors <- c("darkorange1","red", "blue3","darkorange3","darkorange4","coral2","coral3","coral4","brown3")
+ketchup_symbols <- c(0,15,16,1,2,5,6,7,10)
 
 ncomp <- 5                        # Number of components
 nfolds <- 5                       # Number of folds for cross-validation
