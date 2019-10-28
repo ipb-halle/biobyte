@@ -21,9 +21,6 @@ if (length(args) < 2) {
 }
 
 # Load libraries
-library(MSnbase)
-library(xcms)
-library(CAMERA)
 library(mixOmics)
 library(ape)
 library(pvclust)
