@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <tool id="logtrans" name="logtrans" version="1.0">
   <requirements>
-    <container type="docker">ipb-halle/biobyte</container>
+    <container type="docker">ipbhalle/biobyte</container>
   </requirements>
   <description>Log transformation of ketchup data</description>
   <stdio>
