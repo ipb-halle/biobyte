@@ -29,7 +29,7 @@ library(cba)
 library(phangorn)
 
 # Import Feature list
-feat_list <- read.table(file=args[1], header=TRUE, quote="\"", sep="\t")
+feat_list <- read.csv(file=args[1], row.names=1, sep="\t")
 
 # Plot Histogram
 pdf(args[2], encoding="ISOLatin1", pointsize=12, width=10, height=6, family="Helvetica")

@@ -30,7 +30,7 @@ library(phangorn)
 library(gplots)
 
 # Import Feature list
-feat_list <- read.table(file=args[1], header=TRUE, quote="\"", sep="\t")
+feat_list <- read.csv(file=args[1], row.names=1, sep="\t")
 
 # Sample names
 ketchup_samples <- colnames(feat_list)

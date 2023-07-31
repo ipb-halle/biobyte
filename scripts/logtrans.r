@@ -29,7 +29,7 @@ library(cba)
 library(phangorn)
 
 # Import Feature list
-feat_list <- read.table(file=args[1], header=TRUE, quote="\"", sep="\t")
+feat_list <- read.csv(file=args[1], row.names=1, sep="\t")
 
 # Log-Transformation
 feat_list_log <- log(feat_list)
@@ -39,5 +39,5 @@ for (i in 1:ncol(feat_list_log)) {
 feat_list_log[is.na(feat_list_log)] <- 0
 
 # Export log-transformed Feature List
-write.table(x=feat_list_log, file=args[2], sep="\t", quote=TRUE, row.names=FALSE, dec=".")
+write.table(x=feat_list_log, file=args[2], col.names = NA, sep="\t")
 

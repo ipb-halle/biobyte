@@ -29,7 +29,7 @@ library(cba)
 library(phangorn)
 
 # Import Feature list
-feat_list <- read.table(file=args[1], header=TRUE, quote="\"", sep="\t")
+feat_list <- read.csv(file=args[1], row.names=1, sep="\t")
 
 # Sample names
 ketchup_samples <- colnames(feat_list)
@@ -48,8 +48,8 @@ ketchup_colors <- c("darkorange1","blue3","darkorange3","darkorange4","coral2","
 ketchup_symbols <- c(0,16,1,2,5,6,7,10)
 
 # Define samples colors
-ketchup_colors <- c("darkorange1","red", "blue3","darkorange3","darkorange4","coral2","coral3","coral4","brown3")
-ketchup_symbols <- c(0,15,16,1,2,5,6,7,10)
+ketchup_samples_colors <- sapply(ketchup, function(x) { x <- ketchup_colors[which(x==ketchup_names)] } )
+ketchup_samples_symbols <- sapply(ketchup, function(x) { x <- ketchup_symbols[which(x==ketchup_names)] } )
 
 ncomp <- 5                        # Number of components
 nfolds <- 5                       # Number of folds for cross-validation
